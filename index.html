@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script type="text/javascript" src="grid.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+</script>
+<body>
+  <div class="float-container">
+    <div id="tableDiv" class="float-child1"></div>
+
+    <div id ="settings" class="float-child2">
+      <h3>Podatki o stanju</h3>
+      <label for="dimensions">Dimenzije šahovnice:</label>
+      <select name="dimensions" id="dimensions">
+        <option value="4">4x4</option>
+        <option value="5">5x5</option>
+        <option value="6">6x6</option>
+        <option value="7">7x7</option>
+        <option value="8">8x8</option>
+        <option value="9">9x9</option>
+        <option value="10">10x10</option>
+        <option value="11">11x11</option>
+        <option value="12">12x12</option>
+      </select>
+      <p id = "heu">Hevristika: 0</p>
+      <p id = "move">Število korakov: 0</p>
+      <button type="button" onclick="create_table()">Zgeneriraj začetno stanje</button>
+      <button type="button" onclick="solved()">Zaženi algoritem</button>
+      <h3>Izbira algoritma</h3>
+      <label for="HC">Hill climbing</label>
+      <input type="radio" name="algorithm" id="HC" value="HC" checked><br>
+      <label for="SA">Simulated annealing</label>
+      <input type="radio" name="algorithm" id="SA" value="SA"><br>
+      <label for="LBS">Local beam search</label>
+      <input type="radio" name="algorithm" id="LBS" value="LBS"><br>
+      <label for="GA">Genetic algorithm</label>
+      <input type="radio" name="algorithm" id="GA" value="GA"><br>
+      <h3>Parametri algoritma</h3>
+      <h4>Vzpenjanje na hrib:</h4>
+      <label for="HC_input">Število pomikov v enakovredna sosednja stanja:</label>
+      <input type="text" id="HC_input" name="HC_input" value="20"><br>
+      <h4>Simulirano ohlajanje:</h4>
+      <label for="SA_input1">Začetna temperatura:</label>
+      <input type="text" id="SA_input1" name="SA_input1" value="100000"><br>
+      <label for="SA_input2">Sprememba temperature:</label>
+      <input type="text" id="SA_input2" name="SA_input2" value="1"><br>
+      <h4>Iskanje z lokalnim žarkom:</h4>
+      <label for="LBS_input">Število stanj:</label>
+      <input type="text" id="LBS_input1" name="LBS_input1" value="10"><br>
+      <label for="LBS_input">Maksimalno število iteracij:</label>
+      <input type="text" id="LBS_input2" name="LBS_input2" value="50"><br>
+      <h4>Genetski algoritem:</h4>
+      <label for="GA_input1">Velikost populacije:</label>
+      <input type="text" id="GA_input1" name="GA_input1" value="100"><br>
+      <label for="GA_input2">Odstotek elitizma:</label>
+      <input type="text" id="GA_input2" name="GA_input2" value="20"><br>
+      <label for="GA_input3">Verjetnost križanja:</label>
+      <input type="text" id="GA_input3" name="GA_input3" value="0.35"><br>
+      <label for="GA_input4">Verjetnost mutacije:</label>
+      <input type="text" id="GA_input4" name="GA_input4" value="0.05"><br>
+      <label for="GA_input5">Število generacij:</label>
+      <input type="text" id="GA_input5" name="GA_input5" value="1000"><br>
+    </div>
+  </div>
+
+
+</body>
+</html>
